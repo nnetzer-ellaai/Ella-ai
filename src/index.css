@@ -1,0 +1,152 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* @font-face {
+  font-family: "Digibank-Regular";
+  src: url("./assets//fonts/onezero-fonts/NarkissBlockDigibank-Regular.woff2");
+}
+
+@font-face {
+  font-family: "Digibank-Medium";
+  src: url("./assets//fonts/NarkissBlockDigibank-Medium.otf");
+}
+@font-face {
+  font-family: "Digibank-Apparat-Book";
+  src: url("./assets//fonts/Apparat-Book-TRIAL.otf");
+}
+@font-face {
+  font-family: "OneZero-Apparat-Book";
+  src: url("./assets//fonts/OneZero-Apparat-Book.woff");
+}
+@font-face {
+  font-family: "Digibank-extra-light";
+  src: url("./assets//fonts/onezero-fonts/NarkissBlockDigibank-Extralight.woff2");
+}
+@font-face {
+  font-family: "OneZero-Apparat-Book-Medium";
+  src: url("./assets//fonts/onezero-fonts/OneZero-Apparat-Medium.woff");
+} */
+
+@font-face {
+  font-family: "OneZero-Apparat-Light";
+  src: url("./assets//fonts/OneZero-Apparat-Light.woff2");
+}
+@font-face {
+  font-family: "OneZero-Apparat-Book";
+  src: url("./assets//fonts/OneZero-Apparat-Book.woff2");
+}
+@font-face {
+  font-family: "OneZero-Apparat-Medium";
+  src: url("./assets//fonts/OneZero-Apparat-Medium.woff2");
+}
+@font-face {
+  font-family: "OneZero-Apparat-Bold";
+  src: url("./assets//fonts/OneZero-Apparat-Bold.woff2")
+}
+
+@layer base {
+  html {
+    font-family: OneZero-Apparat-Book, system-ui, sans-serif;
+  }
+}
+
+/* .first-screen-container {
+  background-image: url(./assets/bg-mobile.png);
+  background-position: 100% 100%;
+  background-size: 100% 100%;
+} */
+
+@media screen and (min-width: 768px) {
+  .first-screen-container {
+
+    background-image: url(./assets/bg-desktop.png);
+  }
+}
+
+
+.fade-out {
+  /* animation: 1s fadeOut; */
+  opacity: 0 !important;
+}
+
+
+.dot {
+  opacity: 1;
+  transition: 1s opacity;
+}
+
+.bg-after-seventh {
+  background-image: url(./assets/desktop/AfterSeventhBg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 768px) {
+  .bg-after-seventh {
+
+    background-image: url(./assets/desktop/afterseventhmobile.png);
+  }
+  .my-custom-pagination-div{
+    margin-top: -10px;
+    
+  }
+
+  
+}
+
+@media screen and (min-width: 768px) {
+ .swiper-wrapper{
+    margin-top: 10px;
+  }
+
+  .sp_line{
+    border-image: 
+    linear-gradient(
+      to right, 
+      #D9D9D9CC 5%,
+      transparent 5%,
+      transparent 95%,
+      #D9D9D9CC 95%
+    ) 3 0 100%;
+    align-self: center;
+    width: 111%;
+  }
+  
+}
+.sp_line{
+    border-image: 
+    linear-gradient(
+      to right, 
+      #D9D9D9CC 8%,
+      transparent 8%,
+      transparent 92%,
+      #D9D9D9CC 92%
+    ) 3 0 100%;
+    align-self: center;
+    width: 120%;
+  }
+
+
+.swiper-wrapper{
+  transition-timing-function: linear ;
+}
+
+.selected_card{
+  box-shadow: 0px 4px 24px 0px rgba(95, 113, 233, 0.2);
+  
+}
+
+/* 
+.swiper {
+
+  overflow: inherit; 
+} */
+
+.swiper-pagination-bullet-active {
+    /* opacity: var(--swiper-pagination-bullet-opacity, 1); */
+    background: #757575;
+    
+}
+

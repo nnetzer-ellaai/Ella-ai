@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run *)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(awk 'NR>=113 && NR<=132' /Users/nivnetzer/Documents/Ella_AI/src/components/SixthPart/SixthPart.tsx)",
+      "Bash(python3 -c ' *)",
+      "Bash(pip3 install *)",
+      "Bash(curl -s -X POST https://formspree.io/f/xyzgvnly -H 'Accept: application/json' -d 'name=Test&email=test@test.com&company=TestCo&message=BuildTest')",
+      "Bash(curl -s http://localhost:5173)",
+      "Read(//Users/nivnetzer/Documents/**)",
+      "Bash(zip -r ella-ai-v1.zip Ella_AI/ella_ai/)",
+      "Bash(rm /Users/nivnetzer/Documents/ella-ai-v1.zip)",
+      "Bash(zip -q -r ella-ai-v1.zip Ella_AI/ella_ai/)",
+      "Bash(git init *)",
+      "Bash(git config *)",
+      "Bash(git add *)",
+      "Bash(git commit -m 'Initial commit: Ella.AI website V1 *)"
+    ]
+  }
+}
