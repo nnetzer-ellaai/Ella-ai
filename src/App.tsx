@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import FirstScreen from './components/FirstScreen/FirstScreen';
 import SecondScreen from './components/SecondScreen/SecondScreen';
@@ -18,8 +19,9 @@ import FinancialImpactScreen from './components/FinancialImpactScreen/FinancialI
 import ContactModal from './components/Form/ContactModal';
 import FloatingCTA from './components/Ui/FloatingCTA';
 import StickyPopup from './components/Ui/StickyPopup';
+import V2App from './v2/V2App';
 
-function App() {
+function HomePage() {
   const [error, setError] = useState(false);
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
   const [isPopupDismissed, setIsPopupDismissed] = useState(false);
@@ -63,6 +65,17 @@ function App() {
       />
       <ContactModal open={isContactModalOpen} onClose={() => setIsContactModalOpen(false)} />
     </div>
+  );
+}
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/v2" element={<V2App />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
