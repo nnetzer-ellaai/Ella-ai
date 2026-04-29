@@ -2,10 +2,9 @@ import { v2Copy } from '../copy';
 
 type Props = {
   onPrimaryCta: () => void;
-  onSecondaryCta: () => void;
 };
 
-export default function V2ClosingCTA({ onPrimaryCta, onSecondaryCta }: Props) {
+export default function V2ClosingCTA({ onPrimaryCta }: Props) {
   const c = v2Copy.closing;
   return (
     <section
@@ -18,18 +17,12 @@ export default function V2ClosingCTA({ onPrimaryCta, onSecondaryCta }: Props) {
           <br />
           {c.headlineLine2}
         </h2>
-        <div className="flex flex-col md:flex-row gap-[14px] md:gap-[20px] items-center justify-center mt-[40px] md:mt-[56px]">
+        <div className="flex justify-center mt-[40px] md:mt-[56px]">
           <button
             onClick={onPrimaryCta}
             className="font-OneZero-Apparat-Book text-[15px] md:text-[16px] text-darkGrey bg-white rounded-3xl py-[14px] px-8 hover:bg-white/90 transition-colors"
           >
             {c.primaryCta}
-          </button>
-          <button
-            onClick={onSecondaryCta}
-            className="font-OneZero-Apparat-Book text-[15px] md:text-[16px] text-white border border-white/40 rounded-3xl py-[14px] px-8 hover:bg-white/10 transition-colors"
-          >
-            {c.secondaryCta} →
           </button>
         </div>
       </div>
