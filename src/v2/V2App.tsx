@@ -4,10 +4,14 @@ import FormImage from '../components/Form/FormImage';
 import FormError from '../components/Form/FormError';
 import Footer from '../components/Footer/Footer';
 import ContactModal from '../components/Form/ContactModal';
+import FloatingCTA from '../components/Ui/FloatingCTA';
+import StickyPopup from '../components/Ui/StickyPopup';
 
 import V2Hero from './components/V2Hero';
+import V2Typewriter from './components/V2Typewriter';
 import V2BuiltRunning from './components/V2BuiltRunning';
 import V2KPIs from './components/V2KPIs';
+import V2DemoSlides from './components/V2DemoSlides';
 import V2ImmediateValue from './components/V2ImmediateValue';
 import V2InterfaceChanging from './components/V2InterfaceChanging';
 import V2FutureProof from './components/V2FutureProof';
@@ -21,20 +25,20 @@ import V2ClosingCTA from './components/V2ClosingCTA';
 export default function V2App() {
   const [error, setError] = useState(false);
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
+  const [isPopupDismissed, setIsPopupDismissed] = useState(false);
 
   if (error) return <FormError />;
 
   const openContact = () => setIsContactModalOpen(true);
-  const scrollToForm = () => {
-    const el = document.getElementById('v2-lead-form');
-    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  };
 
   return (
     <div>
-      <V2Hero onPrimaryCta={openContact} onSecondaryCta={scrollToForm} />
+      <V2Hero onPrimaryCta={openContact} />
+      <V2Typewriter />
       <V2BuiltRunning />
       <V2KPIs />
+      <V2DemoSlides />
+      <hr className="border-b w-[90%] mx-auto" />
       <V2ImmediateValue />
       <V2InterfaceChanging />
       <V2FutureProof />
@@ -43,7 +47,7 @@ export default function V2App() {
       <V2FinancialBrain />
       <V2OpenControlled />
       <V2NoHeavyLifting />
-      <V2ClosingCTA onPrimaryCta={scrollToForm} onSecondaryCta={openContact} />
+      <V2ClosingCTA onPrimaryCta={openContact} />
 
       <div
         id="v2-lead-form"
@@ -54,6 +58,18 @@ export default function V2App() {
       </div>
 
       <Footer hidePartnerCredit />
+
+      {isPopupDismissed && (
+        <FloatingCTA
+          onContactClick={openContact}
+          isModalOpen={isContactModalOpen}
+        />
+      )}
+      <StickyPopup
+        onContactClick={openContact}
+        isModalOpen={isContactModalOpen}
+        onDismiss={() => setIsPopupDismissed(true)}
+      />
 
       <ContactModal
         open={isContactModalOpen}
