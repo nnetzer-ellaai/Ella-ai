@@ -12,6 +12,7 @@ import V2Typewriter from './components/V2Typewriter';
 import V2BuiltRunning from './components/V2BuiltRunning';
 import V2KPIs from './components/V2KPIs';
 import V2DemoSlides from './components/V2DemoSlides';
+import V2VideoDemos from './components/V2VideoDemos';
 import V2ImmediateValue from './components/V2ImmediateValue';
 import V2InterfaceChanging from './components/V2InterfaceChanging';
 import V2FutureProof from './components/V2FutureProof';
@@ -37,6 +38,7 @@ export default function V2App() {
       <V2Typewriter />
       <V2BuiltRunning />
       <V2KPIs />
+      <V2VideoDemos />
       <V2DemoSlides />
       <hr className="border-b w-[90%] mx-auto" />
       <V2ImmediateValue />
