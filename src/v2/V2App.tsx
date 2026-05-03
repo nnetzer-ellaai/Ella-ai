@@ -26,18 +26,33 @@ import V2ClosingCTA from './components/V2ClosingCTA';
 import V2Nav from './components/V2Nav';
 import V2Timeline from './components/V2Timeline';
 import V2ImpactCards from './components/V2ImpactCards';
+import V2FAQ from './components/V2FAQ';
+import { v2Copy } from './copy';
 
 export default function V2App() {
   const [error, setError] = useState(false);
 
   if (error) return <FormError />;
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": v2Copy.faq.items.map(item => ({
+      "@type": "Question",
+      "name": item.q,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": item.a,
+      },
+    })),
+  };
+
   return (
     <div className="bg-white">
       <Helmet>
         <title>Ella — The AI Banker for Banks | Stop Piloting. Start Delivering.</title>
-        <meta name="description" content="Ella is a production-grade AI banker handling 85% of daily customer interactions. Live in a licensed bank for 2+ years. White-label AI banking infrastructure, deployed in months." />
-        <meta name="keywords" content="AI banker, generative AI banking, AI for banks, white-label AI banking, banking AI platform, conversational banking AI, AI banking infrastructure" />
+        <meta name="description" content="Ella is a white-label AI banking platform handling 85% of daily customer interactions in licensed banks since 2022. Production infrastructure, not a prototype. Deployed in months." />
+        <meta name="keywords" content="AI banking platform, AI banker, white-label AI banking, AI for banks, banking AI platform, conversational banking AI, AI banking infrastructure, generative AI banking" />
         <link rel="canonical" href="https://www.ellaai.ai/" />
         {/* Open Graph */}
         <meta property="og:type" content="website" />
@@ -63,14 +78,28 @@ export default function V2App() {
           "applicationCategory": "FinanceApplication",
           "operatingSystem": "Web",
           "url": "https://www.ellaai.ai/",
-          "description": "Generative AI banker handling 85% of daily customer interactions. Production-proven in a licensed bank for over 2 years.",
+          "description": "A white-label AI banking platform handling 85% of daily customer interactions. Production-proven in a licensed bank since 2022 with 10M+ real customer interactions.",
           "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
           "provider": {
             "@type": "Organization",
             "name": "Ella.AI",
             "url": "https://www.ellaai.ai",
-            "email": "info@ellaai.ai"
-          }
+            "email": "info@ellaai.ai",
+          },
+        })}</script>
+        {/* Structured data: FAQPage */}
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+        {/* Structured data: Organization */}
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Ella.AI",
+          "url": "https://www.ellaai.ai",
+          "email": "info@ellaai.ai",
+          "description": "Ella.AI builds white-label AI banking platforms for licensed banks. Ella automates 85% of daily banking interactions in production environments.",
+          "foundingDate": "2022",
+          "areaServed": "Worldwide",
+          "knowsAbout": ["AI banking", "white-label banking AI", "conversational banking", "AI financial services"],
         })}</script>
       </Helmet>
       <V2Nav />
@@ -91,6 +120,7 @@ export default function V2App() {
       <V2FinancialBrain />
       <V2OpenControlled />
       <V2NoHeavyLifting />
+      <V2FAQ />
       <V2ClosingCTA onPrimaryCta={openCalendly} />
 
       <div
