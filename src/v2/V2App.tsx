@@ -51,7 +51,7 @@ export default function V2App() {
     <div className="bg-white">
       <Helmet>
         <title>Ella — The AI Banker for Banks | Stop Piloting. Start Delivering.</title>
-        <meta name="description" content="Ella is a white-label AI banking platform handling 85% of daily customer interactions in licensed banks since 2022. Production infrastructure, not a prototype. Deployed in months." />
+        <meta name="description" content="Ella is a white-label AI banking platform handling 85% of daily customer interactions in licensed banks. Production infrastructure, not a prototype. Deployed in months." />
         <meta name="keywords" content="AI banking platform, AI banker, white-label AI banking, AI for banks, banking AI platform, conversational banking AI, AI banking infrastructure, generative AI banking" />
         <link rel="canonical" href="https://www.ellaai.ai/" />
         {/* Open Graph */}
@@ -78,7 +78,7 @@ export default function V2App() {
           "applicationCategory": "FinanceApplication",
           "operatingSystem": "Web",
           "url": "https://www.ellaai.ai/",
-          "description": "A white-label AI banking platform handling 85% of daily customer interactions. Production-proven in a licensed bank since 2022 with 10M+ real customer interactions.",
+          "description": "A white-label AI banking platform handling 85% of daily customer interactions. Production-proven in a licensed bank for over 2 years with 10M+ real customer interactions.",
           "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
           "provider": {
             "@type": "Organization",
@@ -97,7 +97,7 @@ export default function V2App() {
           "url": "https://www.ellaai.ai",
           "email": "info@ellaai.ai",
           "description": "Ella.AI builds white-label AI banking platforms for licensed banks. Ella automates 85% of daily banking interactions in production environments.",
-          "foundingDate": "2022",
+
           "areaServed": "Worldwide",
           "knowsAbout": ["AI banking", "white-label banking AI", "conversational banking", "AI financial services"],
         })}</script>
@@ -108,7 +108,7 @@ export default function V2App() {
           "name": "Ella.AI",
           "alternateName": "Ella AI Banking Platform",
           "url": "https://www.ellaai.ai",
-          "description": "White-label AI banking platform for licensed banks. Handling 85% of daily interactions in production since 2022.",
+          "description": "White-label AI banking platform for licensed banks. Handling 85% of daily interactions in production for over 2 years.",
         })}</script>
         {/* Structured data: Service */}
         <script type="application/ld+json">{JSON.stringify({
@@ -116,7 +116,7 @@ export default function V2App() {
           "@type": "Service",
           "name": "Ella — White-Label AI Banking Platform",
           "serviceType": "AI Banking Platform",
-          "description": "Ella is a white-label AI banking platform that automates customer service, sales, and banking transactions in licensed banks. Handling 85% of daily interactions in production since 2022 with 10M+ real customer interactions.",
+          "description": "Ella is a white-label AI banking platform that automates customer service, sales, and banking transactions in licensed banks. Handling 85% of daily interactions in production for over 2 years with 10M+ real customer interactions.",
           "provider": {
             "@type": "Organization",
             "name": "Ella.AI",

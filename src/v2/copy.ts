@@ -15,7 +15,7 @@ export const v2Copy = {
     eyebrow: '01 · Built and running',
     headline: "This is not a concept. It's live.",
     body: [
-      "Ella is a white-label AI banking platform that automates customer service, sales, and transactions inside licensed banks — live since 2022. Ella runs inside OneZero, Israel's first new licensed bank in over forty years and the proof case for AI-native banking. Live customers. Real money. Over two years in production.",
+      "Ella is a white-label AI banking platform that automates customer service, sales, and transactions inside licensed banks. Ella runs inside OneZero, Israel's first new licensed bank in over forty years and the proof case for AI-native banking. Live customers. Real money. Over two years in production.",
       'Not just answering questions. Understanding, guiding, executing.',
     ],
   },
@@ -23,7 +23,7 @@ export const v2Copy = {
   kpis: {
     eyebrow: '02 · The OneZero use-case',
     headline: 'Numbers from a bank that runs on Ella.',
-    proof: 'Live since 2022 · 2+ years in production · 10M+ real customer interactions',
+    proof: 'Running for over 2 years · 10M+ real customer interactions',
     stats: [
       { value: '5×', label: 'Engagement', desc: 'More customer interactions with the bank.' },
       { value: '−60%', label: 'Cost-to-serve', desc: '2× growth with 20% fewer bankers.' },
@@ -129,7 +129,7 @@ export const v2Copy = {
     items: [
       {
         q: 'What is Ella?',
-        a: 'Ella is a white-label AI banking platform that handles customer service, sales conversations, and banking transactions in real time. It is deployed inside licensed banks under the bank\'s own brand — not a chatbot, but a production-grade AI banker with audit trails, compliance controls, and live execution. Ella has been in production since 2022 and has handled over 10 million real customer interactions.',
+        a: 'Ella is a white-label AI banking platform that handles customer service, sales conversations, and banking transactions in real time. It is deployed inside licensed banks under the bank\'s own brand — not a chatbot, but a production-grade AI banker with audit trails, compliance controls, and live execution. Ella has been in production for over 2 years and has handled over 10 million real customer interactions.',
       },
       {
         q: 'What is white-label AI banking?',

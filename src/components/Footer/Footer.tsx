@@ -14,7 +14,7 @@ export default function Footer({ hidePartnerCredit = false, showLocation = false
             {CONTACT_EMAIL}
           </a>
           {showLocation && (
-            <p className="text-xs text-midGrey">Tel Aviv, Israel · In production since 2022</p>
+            <p className="text-xs text-midGrey">Tel Aviv, Israel</p>
           )}
           {!hidePartnerCredit && (
             <p className="text-xs text-midGrey">Design partner: ONE ZERO Bank</p>
