@@ -4,7 +4,7 @@ import { v2Copy } from '../copy';
 export default function V2FutureProof() {
   const c = v2Copy.futureProof;
   return (
-    <V2Section eyebrow={c.eyebrow}>
+    <V2Section eyebrow={c.eyebrow} id="v2-future-proof">
       <h2 className="font-OneZero-Apparat-Light text-[36px] md:text-[58px] leading-[105%] mb-[24px] md:mb-[28px] max-w-[900px]">
         {c.headline}
       </h2>

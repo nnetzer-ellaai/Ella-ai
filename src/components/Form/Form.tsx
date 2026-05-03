@@ -97,6 +97,8 @@ export default function Form({ setError, isModal = false }: Props) {
           </div>
         ) : (
           <form className="flex flex-col gap-5">
+            {/* Honeypot — bots fill this, real users don't */}
+            <input type="checkbox" name="botcheck" className="hidden" style={{ display: 'none' }} tabIndex={-1} autoComplete="off" />
             <input className={`${inputStyle} ${isTouched.fullName && !isFullNameValid && invalidInputStyle}`} type="text" name="fullName" placeholder="Name" onChange={(e) => setFullName(e.target.value)} onBlur={() => setIsTouched(p => ({ ...p, fullName: true }))} />
             <input className={`${inputStyle} ${isTouched.email && !isEmailValid && invalidInputStyle}`} type="email" name="email" placeholder="Work Email" onChange={(e) => setEmail(e.target.value)} onBlur={() => setIsTouched(p => ({ ...p, email: true }))} />
             <input className={`${inputStyle} ${isTouched.company && !isCompanyValid && invalidInputStyle}`} type="text" name="Company" placeholder="Company" onChange={(e) => setCompany(e.target.value)} onBlur={() => setIsTouched(p => ({ ...p, company: true }))} />
@@ -139,6 +141,8 @@ export default function Form({ setError, isModal = false }: Props) {
             על כל שאלה.
           </p> */}
           <form className="flex flex-col gap-5 my-4 md:mt-6 md:gap-[44px]">
+            {/* Honeypot — bots fill this, real users don't */}
+            <input type="checkbox" name="botcheck" className="hidden" style={{ display: 'none' }} tabIndex={-1} autoComplete="off" />
             <input
               className={`${inputStyle} ${
                 isTouched.fullName && !isFullNameValid && invalidInputStyle

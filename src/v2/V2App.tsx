@@ -4,9 +4,9 @@ import Form from '../components/Form/Form';
 import FormImage from '../components/Form/FormImage';
 import FormError from '../components/Form/FormError';
 import Footer from '../components/Footer/Footer';
-import ContactModal from '../components/Form/ContactModal';
 import FloatingCTA from '../components/Ui/FloatingCTA';
 import StickyPopup from '../components/Ui/StickyPopup';
+import { openCalendly } from '../utils/calendly';
 
 import V2Hero from './components/V2Hero';
 import V2Typewriter from './components/V2Typewriter';
@@ -23,26 +23,25 @@ import V2FinancialBrain from './components/V2FinancialBrain';
 import V2OpenControlled from './components/V2OpenControlled';
 import V2NoHeavyLifting from './components/V2NoHeavyLifting';
 import V2ClosingCTA from './components/V2ClosingCTA';
+import V2Nav from './components/V2Nav';
+import V2Timeline from './components/V2Timeline';
+import V2ImpactCards from './components/V2ImpactCards';
 
 export default function V2App() {
   const [error, setError] = useState(false);
-  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
-  const [isPopupDismissed, setIsPopupDismissed] = useState(false);
 
   if (error) return <FormError />;
 
-  const openContact = () => setIsContactModalOpen(true);
-
   return (
-    <div>
+    <div className="bg-white">
       <Helmet>
         <title>Ella — The AI Banker for Banks | Stop Piloting. Start Delivering.</title>
         <meta name="description" content="Ella is a production-grade AI banker handling 85% of daily customer interactions. Live in a licensed bank for 2+ years. White-label AI banking infrastructure, deployed in months." />
         <meta name="keywords" content="AI banker, generative AI banking, AI for banks, white-label AI banking, banking AI platform, conversational banking AI, AI banking infrastructure" />
-        <link rel="canonical" href="https://www.ellaai.ai/v2" />
+        <link rel="canonical" href="https://www.ellaai.ai/" />
         {/* Open Graph */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.ellaai.ai/v2" />
+        <meta property="og:url" content="https://www.ellaai.ai/" />
         <meta property="og:title" content="Ella — The AI Banker for Banks | Stop Piloting. Start Delivering." />
         <meta property="og:description" content="Ella handles 85% of daily banking interactions. Production-proven in a licensed bank for 2+ years. White-label AI banking, live in months." />
         <meta property="og:image" content="https://www.ellaai.ai/og-image.png" />
@@ -63,7 +62,7 @@ export default function V2App() {
           "name": "Ella",
           "applicationCategory": "FinanceApplication",
           "operatingSystem": "Web",
-          "url": "https://www.ellaai.ai/v2",
+          "url": "https://www.ellaai.ai/",
           "description": "Generative AI banker handling 85% of daily customer interactions. Production-proven in a licensed bank for over 2 years.",
           "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
           "provider": {
@@ -74,10 +73,13 @@ export default function V2App() {
           }
         })}</script>
       </Helmet>
-      <V2Hero onPrimaryCta={openContact} />
+      <V2Nav />
+      <V2Hero onPrimaryCta={openCalendly} />
       <V2Typewriter />
       <V2BuiltRunning />
       <V2KPIs />
+      <V2ImpactCards />
+      <V2Timeline />
       <V2VideoDemos />
       <V2DemoSlides />
       <hr className="border-b w-[90%] mx-auto" />
@@ -89,7 +91,7 @@ export default function V2App() {
       <V2FinancialBrain />
       <V2OpenControlled />
       <V2NoHeavyLifting />
-      <V2ClosingCTA onPrimaryCta={openContact} />
+      <V2ClosingCTA onPrimaryCta={openCalendly} />
 
       <div
         id="v2-lead-form"
@@ -101,21 +103,11 @@ export default function V2App() {
 
       <Footer hidePartnerCredit />
 
-      {isPopupDismissed && (
-        <FloatingCTA
-          onContactClick={openContact}
-          isModalOpen={isContactModalOpen}
-        />
-      )}
+      <FloatingCTA onContactClick={openCalendly} ctaLabel="Book a demo" />
       <StickyPopup
-        onContactClick={openContact}
-        isModalOpen={isContactModalOpen}
-        onDismiss={() => setIsPopupDismissed(true)}
-      />
-
-      <ContactModal
-        open={isContactModalOpen}
-        onClose={() => setIsContactModalOpen(false)}
+        onContactClick={openCalendly}
+        onDismiss={() => {}}
+        ctaLabel="Book a demo"
       />
     </div>
   );

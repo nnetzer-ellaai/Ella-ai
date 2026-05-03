@@ -88,7 +88,7 @@ export default function V2Typewriter() {
   }
 
   return (
-    <div className="flex flex-col justify-center gap-[50px] pt-[67px] pb-[81px] px-[23px] md:pt-[93px] md:pb-[137px] items-center">
+    <div className="bg-white flex flex-col justify-center gap-[50px] pt-[67px] pb-[81px] px-[23px] md:pt-[93px] md:pb-[137px] items-center">
       <div className="flex flex-col gap-[32px] md:gap-[42px] right-1/2 items-center">
         <video
           autoPlay
