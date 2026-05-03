@@ -72,8 +72,8 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/v2" element={<V2App />} />
+        <Route path="/" element={<V2App />} />
+        <Route path="/v1" element={<HomePage />} />
       </Routes>
     </BrowserRouter>
   );

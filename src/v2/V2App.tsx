@@ -38,10 +38,10 @@ export default function V2App() {
         <title>Ella — The AI Banker for Banks | Stop Piloting. Start Delivering.</title>
         <meta name="description" content="Ella is a production-grade AI banker handling 85% of daily customer interactions. Live in a licensed bank for 2+ years. White-label AI banking infrastructure, deployed in months." />
         <meta name="keywords" content="AI banker, generative AI banking, AI for banks, white-label AI banking, banking AI platform, conversational banking AI, AI banking infrastructure" />
-        <link rel="canonical" href="https://www.ellaai.ai/v2" />
+        <link rel="canonical" href="https://www.ellaai.ai/" />
         {/* Open Graph */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.ellaai.ai/v2" />
+        <meta property="og:url" content="https://www.ellaai.ai/" />
         <meta property="og:title" content="Ella — The AI Banker for Banks | Stop Piloting. Start Delivering." />
         <meta property="og:description" content="Ella handles 85% of daily banking interactions. Production-proven in a licensed bank for 2+ years. White-label AI banking, live in months." />
         <meta property="og:image" content="https://www.ellaai.ai/og-image.png" />
@@ -62,7 +62,7 @@ export default function V2App() {
           "name": "Ella",
           "applicationCategory": "FinanceApplication",
           "operatingSystem": "Web",
-          "url": "https://www.ellaai.ai/v2",
+          "url": "https://www.ellaai.ai/",
           "description": "Generative AI banker handling 85% of daily customer interactions. Production-proven in a licensed bank for over 2 years.",
           "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
           "provider": {
