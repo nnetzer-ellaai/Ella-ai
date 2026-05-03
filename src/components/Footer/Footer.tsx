@@ -3,8 +3,9 @@ import ellaLogo from "../../assets/ella-logo.png";
 import { CONTACT_EMAIL } from "../../constants/constants";
 type Props = {
   hidePartnerCredit?: boolean;
+  showLocation?: boolean;
 };
-export default function Footer({ hidePartnerCredit = false }: Props) {
+export default function Footer({ hidePartnerCredit = false, showLocation = false }: Props) {
   return (
     <footer className=" flex flex-col-reverse md:flex-col py-4 md:py-[37px] px-5 items-start md:justify-between md:px-[4.5rem] gap-[25px] md:gap-[0]">
       <div className=" flex flex-col md:flex-row-reverse md:justify-between w-full">
@@ -12,6 +13,9 @@ export default function Footer({ hidePartnerCredit = false }: Props) {
           <a href={`mailto:${CONTACT_EMAIL}`} className="hover:underline">
             {CONTACT_EMAIL}
           </a>
+          {showLocation && (
+            <p className="text-xs text-midGrey">Tel Aviv, Israel · In production since 2022</p>
+          )}
           {!hidePartnerCredit && (
             <p className="text-xs text-midGrey">Design partner: ONE ZERO Bank</p>
           )}

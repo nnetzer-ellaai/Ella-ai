@@ -95,7 +95,7 @@ export const v2Copy = {
     eyebrow: '10 · Built for real banking',
     headline: 'AI is easy. Banking AI is not.',
     paragraphs: [
-      'Ella was built inside a regulated bank, for regulated environments. Audit trails, consent enforcement, policy-backed answers, fraud and risk controls. This is production infrastructure, not a prototype.',
+      'Ella was built inside a regulated bank, for regulated environments — including AML/KYC mandates, consent frameworks, and central bank compliance requirements. Audit trails, consent enforcement, policy-backed answers, fraud and risk controls. This is production infrastructure, not a prototype.',
       "While many solutions are still optimized for demos and small POCs, Ella has been operating in real customer conversations for over two years, learning, adapting, and improving with every interaction. That's not just deployment. That's accumulated intelligence you can't replicate overnight.",
     ],
     pullQuote: 'Every interaction: secure, governed, compliant.',

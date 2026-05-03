@@ -5,7 +5,7 @@ import { cloudflare } from "@cloudflare/vite-plugin";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: './',
+  base: '/',
   build: {
     outDir: './ella_ai',
   },

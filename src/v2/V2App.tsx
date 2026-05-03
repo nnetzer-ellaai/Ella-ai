@@ -101,6 +101,67 @@ export default function V2App() {
           "areaServed": "Worldwide",
           "knowsAbout": ["AI banking", "white-label banking AI", "conversational banking", "AI financial services"],
         })}</script>
+        {/* Structured data: WebSite */}
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "Ella.AI",
+          "alternateName": "Ella AI Banking Platform",
+          "url": "https://www.ellaai.ai",
+          "description": "White-label AI banking platform for licensed banks. Handling 85% of daily interactions in production since 2022.",
+        })}</script>
+        {/* Structured data: Service */}
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "Ella — White-Label AI Banking Platform",
+          "serviceType": "AI Banking Platform",
+          "description": "Ella is a white-label AI banking platform that automates customer service, sales, and banking transactions in licensed banks. Handling 85% of daily interactions in production since 2022 with 10M+ real customer interactions.",
+          "provider": {
+            "@type": "Organization",
+            "name": "Ella.AI",
+            "url": "https://www.ellaai.ai",
+            "email": "info@ellaai.ai",
+          },
+          "areaServed": "Worldwide",
+          "audience": {
+            "@type": "Audience",
+            "audienceType": "Banks and licensed financial institutions",
+          },
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Ella AI Banking Products",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "name": "AI Banker (White-Label)",
+                "description": "Deploy a proven AI banker into your banking app in months. Handles customer service, sales, and transactions.",
+              },
+              {
+                "@type": "Offer",
+                "name": "AI Banking Infrastructure",
+                "description": "The infrastructure layer for AI-driven banking — data, permissions, intelligence, and execution rails.",
+              },
+            ],
+          },
+        })}</script>
+        {/* Structured data: VideoObject */}
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "VideoObject",
+          "name": "Ella AI Banking Platform — Live Demo",
+          "description": "See how Ella handles 85% of daily banking interactions in a licensed bank. Customer service, sales conversations, and real-time transactions — all in one AI banker.",
+          "thumbnailUrl": "https://www.ellaai.ai/og-image.png",
+          "uploadDate": "2024-01-01",
+          "duration": "PT2M",
+          "contentUrl": "https://www.ellaai.ai/videos/ella-demo.mp4",
+          "embedUrl": "https://www.ellaai.ai/#v2-video-demos",
+          "publisher": {
+            "@type": "Organization",
+            "name": "Ella.AI",
+            "url": "https://www.ellaai.ai",
+          },
+        })}</script>
       </Helmet>
       <V2Nav />
       <V2Hero onPrimaryCta={openCalendly} />
@@ -131,7 +192,7 @@ export default function V2App() {
         <Form setError={setError} />
       </div>
 
-      <Footer hidePartnerCredit />
+      <Footer hidePartnerCredit showLocation />
 
       <FloatingCTA onContactClick={openCalendly} ctaLabel="Book a demo" />
       <StickyPopup
