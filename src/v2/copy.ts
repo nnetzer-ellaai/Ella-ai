@@ -15,7 +15,7 @@ export const v2Copy = {
     eyebrow: '01 · Built and running',
     headline: "This is not a concept. It's live.",
     body: [
-      "Ella is a white-label AI banking platform that automates customer service, sales, and transactions inside licensed banks — live since 2022. Ella runs inside OneZero, Israel's first new licensed bank in over forty years and the proof case for AI-native banking. Live customers. Real money. Over two years in production.",
+      "Ella is a white-label AI banking platform running inside licensed banks. It powers OneZero, Israel's first new licensed bank in over forty years, and the proof case for AI-native banking. Live customers. Real money. Over two years in production.",
       'Not just answering questions. Understanding, guiding, executing.',
     ],
   },
@@ -23,7 +23,7 @@ export const v2Copy = {
   kpis: {
     eyebrow: '02 · The OneZero use-case',
     headline: 'Numbers from a bank that runs on Ella.',
-    proof: 'Live since 2022 · 2+ years in production · 10M+ real customer interactions',
+    proof: 'Running for over 2 years · 10M+ real customer interactions',
     stats: [
       { value: '5×', label: 'Engagement', desc: 'More customer interactions with the bank.' },
       { value: '−60%', label: 'Cost-to-serve', desc: '2× growth with 20% fewer bankers.' },
@@ -54,7 +54,7 @@ export const v2Copy = {
       },
       {
         title: 'Everyday banking needs, end to end',
-        body: 'Fully connected in the banking app, seamless, with no third parties.',
+        body: 'Fully connected in the banking app, with no third parties in the way.',
       },
     ],
     closer: 'Efficiency, satisfaction, and growth, from week one.',
@@ -64,17 +64,17 @@ export const v2Copy = {
     eyebrow: '07 · The interface is changing',
     headline: 'Banking is moving to AI interfaces.',
     paragraphs: [
-      "Customers are starting to explore financial decisions in tools like ChatGPT and Claude. It's early, but behavior is shifting.",
-      'The next step is clear: customers will expect to ask, understand, decide, and act in one continuous conversation, across a growing ecosystem of AI agents. That only works if banks enable secure, real-time access to financial data beyond their own apps.',
-      'The interface is changing. The question is whether the bank is part of the conversation, or left behind it.',
-      'Ella is how the bank stays in the conversation — on every surface, with the bank in control.',
+      "Customers are starting to explore financial decisions in tools like ChatGPT and Claude. It's early, but the behavior is real.",
+      'The next step is clear: customers will expect to ask, understand, decide, and act in one conversation, across a growing range of AI agents. That only works if banks enable secure, real-time access to financial data beyond their own apps.',
+      'The interface is changing. The question is whether the bank is part of the conversation, or left out of it.',
+      'Ella is how the bank stays in the conversation, on every surface, with the bank in control.',
     ],
   },
 
   futureProof: {
     eyebrow: '08 · Future-proof the bank',
     headline: 'The interface moves. The control stays.',
-    lead: 'As interactions move beyond the banking app to external surfaces, the value shifts to what only banks can own. Ella is the layer that holds it.',
+    lead: 'As interactions move beyond the banking app, the value shifts to what only banks can own. Ella is the layer that holds it.',
     layers: [
       { title: 'Trusted data', desc: 'Validated, permissioned, deterministic.' },
       { title: 'Permissions and consent', desc: 'Bank-owned, audited, enforced.' },
@@ -95,8 +95,8 @@ export const v2Copy = {
     eyebrow: '10 · Built for real banking',
     headline: 'AI is easy. Banking AI is not.',
     paragraphs: [
-      'Ella was built inside a regulated bank, for regulated environments — including AML/KYC mandates, consent frameworks, and central bank compliance requirements. Audit trails, consent enforcement, policy-backed answers, fraud and risk controls. This is production infrastructure, not a prototype.',
-      "While many solutions are still optimized for demos and small POCs, Ella has been operating in real customer conversations for over two years, learning, adapting, and improving with every interaction. That's not just deployment. That's accumulated intelligence you can't replicate overnight.",
+      'Ella was built inside a regulated bank, for regulated environments: AML/KYC mandates, consent frameworks, central bank compliance. Audit trails, consent enforcement, policy-backed answers, fraud and risk controls. This is production infrastructure, not a prototype.',
+      "While most solutions are still being optimized for demos and small pilots, Ella has been running in real customer conversations for over two years, learning and improving with every interaction. That's not just deployment. That's experience you can't shortcut.",
     ],
     pullQuote: 'Every interaction: secure, governed, compliant.',
   },
@@ -104,7 +104,7 @@ export const v2Copy = {
   financialBrain: {
     eyebrow: '11 · A unified financial brain',
     headline: 'One complete view of the customer.',
-    body: "A 360° view of the customer's financial life: core banking data, external financial data, and behavioral signals unified into a single model. Everything in one place, to deliver complete and accurate answers.",
+    body: "A 360° view of the customer's financial life: core banking data, external accounts, and behavioral signals, all in one model. Everything in one place, so every answer is complete.",
     pullQuote: 'Same question. Different customer. Different answer.',
   },
 
@@ -129,23 +129,23 @@ export const v2Copy = {
     items: [
       {
         q: 'What is Ella?',
-        a: 'Ella is a white-label AI banking platform that handles customer service, sales conversations, and banking transactions in real time. It is deployed inside licensed banks under the bank\'s own brand — not a chatbot, but a production-grade AI banker with audit trails, compliance controls, and live execution. Ella has been in production since 2022 and has handled over 10 million real customer interactions.',
+        a: "Ella is a white-label AI banking platform that handles customer service, sales conversations, and banking transactions in real time. Deployed inside licensed banks under the bank's own brand, not a chatbot. A production-grade AI banker with audit trails, compliance controls, and real execution. Running for over 2 years with more than 10 million customer interactions.",
       },
       {
         q: 'What is white-label AI banking?',
-        a: 'White-label AI banking means deploying a proven, production-ready AI banker into your bank\'s existing apps under your brand — without building from scratch. With Ella, customers interact with an AI that feels like part of the bank, running on the bank\'s data, enforcing the bank\'s policies, and executing actions inside the bank\'s systems. Banks go live in months, not years.',
+        a: "White-label AI banking means taking a proven AI banker and deploying it into your own apps, under your brand, without building from scratch. Customers interact with something that feels native to the bank. It runs on the bank's data, follows the bank's policies, and executes actions inside the bank's own systems. Banks go live in months, not years.",
       },
       {
         q: 'How is Ella different from a chatbot or ChatGPT for banking?',
-        a: 'Ella is built for regulated banking environments — not a general-purpose chatbot. Ella doesn\'t just answer questions: it executes transfers, applications, alerts, and product recommendations with policy limits and audit trails on every step. Two years of production intelligence from real banking conversations gives Ella accumulated context that no off-the-shelf model has.',
+        a: "Ella is built for regulated banking, not general-purpose conversation. It doesn't just answer questions, it executes transfers, applications, alerts, and product recommendations, with policy limits and audit trails on every step. Two years of real banking conversations means Ella knows things no off-the-shelf model does.",
       },
       {
         q: 'Can customers use ChatGPT or Claude to interact with their bank through Ella?',
-        a: 'Yes. Ella is designed for a future where customers manage their finances across AI interfaces — not just banking apps. External agents like ChatGPT, Claude, and Perplexity can access banking data through Ella, but only with the bank\'s explicit permissions, the bank\'s consent framework, and full audit trails. The bank always stays in control.',
+        a: "Yes. Ella is built for a world where customers manage finances across many AI surfaces, not just banking apps. External agents like ChatGPT, Claude, and Perplexity can access banking data through Ella, but only with the bank's permissions, the bank's consent framework, and full audit trails. The bank always stays in control.",
       },
       {
         q: 'How long does it take to deploy Ella?',
-        a: 'Ella is a ready-to-use banking OS — no integrations to rebuild, no policy engine to design, no consent system to invent. Most deployments go live in months. The hardest parts of AI banking infrastructure are already solved.',
+        a: 'Ella is a ready-to-use banking OS: no integrations to rebuild, no policy engine to design, no consent system to invent. Most banks go live within months. The hard parts are already solved.',
       },
     ],
   },
