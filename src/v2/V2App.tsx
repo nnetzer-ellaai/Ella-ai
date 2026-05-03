@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import Form from '../components/Form/Form';
 import FormImage from '../components/Form/FormImage';
 import FormError from '../components/Form/FormError';
@@ -34,6 +35,45 @@ export default function V2App() {
 
   return (
     <div>
+      <Helmet>
+        <title>Ella — The AI Banker for Banks | Stop Piloting. Start Delivering.</title>
+        <meta name="description" content="Ella is a production-grade AI banker handling 85% of daily customer interactions. Live in a licensed bank for 2+ years. White-label AI banking infrastructure, deployed in months." />
+        <meta name="keywords" content="AI banker, generative AI banking, AI for banks, white-label AI banking, banking AI platform, conversational banking AI, AI banking infrastructure" />
+        <link rel="canonical" href="https://www.ellaai.ai/v2" />
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.ellaai.ai/v2" />
+        <meta property="og:title" content="Ella — The AI Banker for Banks | Stop Piloting. Start Delivering." />
+        <meta property="og:description" content="Ella handles 85% of daily banking interactions. Production-proven in a licensed bank for 2+ years. White-label AI banking, live in months." />
+        <meta property="og:image" content="https://www.ellaai.ai/og-image.png" />
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Ella — The AI Banker for Banks" />
+        <meta name="twitter:description" content="Ella handles 85% of daily banking interactions. Production-proven. White-label AI banking, live in months." />
+        <meta name="twitter:image" content="https://www.ellaai.ai/og-image.png" />
+        {/* GEO */}
+        <meta name="geo.region" content="IL" />
+        <meta name="geo.placename" content="Israel" />
+        <meta name="geo.position" content="32.0853;34.7818" />
+        <meta name="ICBM" content="32.0853, 34.7818" />
+        {/* Structured data: SoftwareApplication */}
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "name": "Ella",
+          "applicationCategory": "FinanceApplication",
+          "operatingSystem": "Web",
+          "url": "https://www.ellaai.ai/v2",
+          "description": "Generative AI banker handling 85% of daily customer interactions. Production-proven in a licensed bank for over 2 years.",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+          "provider": {
+            "@type": "Organization",
+            "name": "Ella.AI",
+            "url": "https://www.ellaai.ai",
+            "email": "info@ellaai.ai"
+          }
+        })}</script>
+      </Helmet>
       <V2Hero onPrimaryCta={openContact} />
       <V2Typewriter />
       <V2BuiltRunning />

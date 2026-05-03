@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Autoplay, Controller, A11y, Navigation, Pagination } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import { v2Copy } from '../copy';
 
 import slide1 from '../../assets/desk/slides/slide1.png';
 import slide2 from '../../assets/desk/slides/slide2.png';
@@ -53,6 +54,9 @@ export default function V2DemoSlides() {
 
   return (
     <div className="pt-[16.67vw] md:pt-[4.1vw] pb-[19.444vw] md:pb-[9.931vw]">
+      <p className="font-OneZero-Apparat-Bold text-[11px] md:text-[14px] text-blue tracking-[0.18em] uppercase mb-[6vw] md:mb-[2vw] text-center md:text-start md:pl-[5.21vw]">
+        {v2Copy.demoSlides.eyebrow}
+      </p>
       <div className="flex flex-col md:justify-between md:flex-row text-[#3E3E3E] md:pl-[5.21vw] md:pr-[5.76vw]">
         <p className="text-center md:text-start md:w-[unset] text-[6.67vw] leading-[133.333%] md:text-[2.92vw] md:leading-[135.714%]">
           Designed Like a Banker,
