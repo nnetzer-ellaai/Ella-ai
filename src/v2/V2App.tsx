@@ -4,9 +4,9 @@ import Form from '../components/Form/Form';
 import FormImage from '../components/Form/FormImage';
 import FormError from '../components/Form/FormError';
 import Footer from '../components/Footer/Footer';
-import ContactModal from '../components/Form/ContactModal';
 import FloatingCTA from '../components/Ui/FloatingCTA';
 import StickyPopup from '../components/Ui/StickyPopup';
+import { openCalendly } from '../utils/calendly';
 
 import V2Hero from './components/V2Hero';
 import V2Typewriter from './components/V2Typewriter';
@@ -26,12 +26,9 @@ import V2ClosingCTA from './components/V2ClosingCTA';
 
 export default function V2App() {
   const [error, setError] = useState(false);
-  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
   const [isPopupDismissed, setIsPopupDismissed] = useState(false);
 
   if (error) return <FormError />;
-
-  const openContact = () => setIsContactModalOpen(true);
 
   return (
     <div>
@@ -74,7 +71,7 @@ export default function V2App() {
           }
         })}</script>
       </Helmet>
-      <V2Hero onPrimaryCta={openContact} />
+      <V2Hero onPrimaryCta={openCalendly} />
       <V2Typewriter />
       <V2BuiltRunning />
       <V2KPIs />
@@ -89,7 +86,7 @@ export default function V2App() {
       <V2FinancialBrain />
       <V2OpenControlled />
       <V2NoHeavyLifting />
-      <V2ClosingCTA onPrimaryCta={openContact} />
+      <V2ClosingCTA onPrimaryCta={openCalendly} />
 
       <div
         id="v2-lead-form"
@@ -103,19 +100,12 @@ export default function V2App() {
 
       {isPopupDismissed && (
         <FloatingCTA
-          onContactClick={openContact}
-          isModalOpen={isContactModalOpen}
+          onContactClick={openCalendly}
         />
       )}
       <StickyPopup
-        onContactClick={openContact}
-        isModalOpen={isContactModalOpen}
+        onContactClick={openCalendly}
         onDismiss={() => setIsPopupDismissed(true)}
-      />
-
-      <ContactModal
-        open={isContactModalOpen}
-        onClose={() => setIsContactModalOpen(false)}
       />
     </div>
   );

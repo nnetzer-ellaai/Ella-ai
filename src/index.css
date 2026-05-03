@@ -31,18 +31,22 @@
 @font-face {
   font-family: "OneZero-Apparat-Light";
   src: url("./assets//fonts/OneZero-Apparat-Light.woff2");
+  font-display: swap;
 }
 @font-face {
   font-family: "OneZero-Apparat-Book";
   src: url("./assets//fonts/OneZero-Apparat-Book.woff2");
+  font-display: swap;
 }
 @font-face {
   font-family: "OneZero-Apparat-Medium";
   src: url("./assets//fonts/OneZero-Apparat-Medium.woff2");
+  font-display: swap;
 }
 @font-face {
   font-family: "OneZero-Apparat-Bold";
-  src: url("./assets//fonts/OneZero-Apparat-Bold.woff2")
+  src: url("./assets//fonts/OneZero-Apparat-Bold.woff2");
+  font-display: swap;
 }
 
 @layer base {
