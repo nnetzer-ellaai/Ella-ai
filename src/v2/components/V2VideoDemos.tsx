@@ -32,7 +32,7 @@ export default function V2VideoDemos() {
   }, [visible]);
 
   return (
-    <div ref={containerRef} className="w-full flex items-center justify-center py-[12vw] md:py-[4vw]">
+    <div ref={containerRef} className="bg-white w-full flex items-center justify-center py-[12vw] md:py-[4vw]">
       <div className="w-[90%] h-[115vw] md:h-[unset] md:aspect-[16/9]">
         <video
           ref={videoRef}

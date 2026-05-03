@@ -5,9 +5,10 @@ type Props = {
   onContactClick: () => void;
   onDemoClick?: () => void;
   isModalOpen?: boolean;
+  ctaLabel?: string;
 };
 
-export default function FloatingCTA({ onContactClick, onDemoClick, isModalOpen = false }: Props) {
+export default function FloatingCTA({ onContactClick, onDemoClick, isModalOpen = false, ctaLabel = 'Contact Us' }: Props) {
   const [isVisible, setIsVisible] = useState(false);
   const [isDesktop, setIsDesktop] = useState(window.screen.width >= MIN_DESKTOP_WIDTH);
 
@@ -38,9 +39,9 @@ export default function FloatingCTA({ onContactClick, onDemoClick, isModalOpen =
       <button
         onClick={onContactClick}
         className="fixed bottom-8 right-8 z-40 bg-blue text-white rounded-full py-3 px-6 font-OneZero-Apparat-Book shadow-lg hover:bg-blue/90 transition-all duration-300"
-        aria-label="Contact Us"
+        aria-label={ctaLabel}
       >
-        Contact Us
+        {ctaLabel}
       </button>
     );
   }
@@ -51,7 +52,7 @@ export default function FloatingCTA({ onContactClick, onDemoClick, isModalOpen =
         onClick={onContactClick}
         className="flex-1 bg-blue text-white rounded-full py-3 font-OneZero-Apparat-Book text-sm hover:bg-blue/90 transition-colors"
       >
-        Contact Us
+        {ctaLabel}
       </button>
       {onDemoClick && (
         <button

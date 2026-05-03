@@ -15,7 +15,14 @@
       "Bash(git init *)",
       "Bash(git config *)",
       "Bash(git add *)",
-      "Bash(git commit -m 'Initial commit: Ella.AI website V1 *)"
+      "Bash(git commit -m 'Initial commit: Ella.AI website V1 *)",
+      "Bash(npm install *)",
+      "Bash(wrangler deployments *)",
+      "Bash(npx wrangler *)",
+      "Bash(npx tsc *)",
+      "Bash(git commit -m ' *)",
+      "Bash(grep -E '\\\\.\\(json|jsonc|toml|ts|tsx|jsx|js|html|css\\)$')",
+      "Bash(xargs cat *)"
     ]
   }
 }

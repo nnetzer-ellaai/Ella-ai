@@ -33,7 +33,7 @@ export default function V2App() {
   if (error) return <FormError />;
 
   return (
-    <div>
+    <div className="bg-white">
       <Helmet>
         <title>Ella — The AI Banker for Banks | Stop Piloting. Start Delivering.</title>
         <meta name="description" content="Ella is a production-grade AI banker handling 85% of daily customer interactions. Live in a licensed bank for 2+ years. White-label AI banking infrastructure, deployed in months." />
@@ -103,10 +103,11 @@ export default function V2App() {
 
       <Footer hidePartnerCredit />
 
-      <FloatingCTA onContactClick={openCalendly} />
+      <FloatingCTA onContactClick={openCalendly} ctaLabel="Book a demo" />
       <StickyPopup
         onContactClick={openCalendly}
         onDismiss={() => {}}
+        ctaLabel="Book a demo"
       />
     </div>
   );

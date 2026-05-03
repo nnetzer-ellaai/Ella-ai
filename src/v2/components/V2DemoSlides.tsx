@@ -53,7 +53,7 @@ export default function V2DemoSlides() {
   };
 
   return (
-    <div className="pt-[16.67vw] md:pt-[4.1vw] pb-[19.444vw] md:pb-[9.931vw]">
+    <div className="bg-white pt-[16.67vw] md:pt-[4.1vw] pb-[19.444vw] md:pb-[9.931vw] overflow-hidden">
       <p className="font-OneZero-Apparat-Bold text-[11px] md:text-[14px] text-blue tracking-[0.18em] uppercase mb-[6vw] md:mb-[2vw] text-center md:text-start md:pl-[5.21vw]">
         {v2Copy.demoSlides.eyebrow}
       </p>

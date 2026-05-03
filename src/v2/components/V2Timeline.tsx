@@ -94,7 +94,7 @@ export default function V2Timeline() {
       <div className="w-full md:w-[90%] max-w-[1280px] mx-auto">
         {/* Eyebrow */}
         <p className="font-OneZero-Apparat-Book text-[12px] md:text-[14px] text-blue tracking-[0.14em] uppercase mb-[14px] md:mb-[18px]">
-          How it works
+          04 · How it works
         </p>
         <h2 className="font-OneZero-Apparat-Light text-[36px] md:text-[58px] leading-[105%] mb-[56px] md:mb-[80px] max-w-[800px] text-darkGrey">
           From deployment to the infrastructure of AI banking.

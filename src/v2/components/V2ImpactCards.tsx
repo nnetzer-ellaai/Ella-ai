@@ -17,7 +17,7 @@ export default function V2ImpactCards() {
     <section dir="ltr" className="bg-white w-full py-[64px] md:py-[110px] px-5 md:px-0">
       <div className="w-full md:w-[90%] max-w-[1280px] mx-auto">
         <p className="font-OneZero-Apparat-Book text-[12px] md:text-[14px] text-blue tracking-[0.14em] uppercase mb-[14px] md:mb-[18px]">
-          Financial impact
+          03 · Financial impact
         </p>
         <h2 className="font-OneZero-Apparat-Light text-[36px] md:text-[58px] leading-[105%] mb-[12px] md:mb-[16px] max-w-[900px] text-darkGrey">
           Clear ROI. Lower costs, higher revenue.

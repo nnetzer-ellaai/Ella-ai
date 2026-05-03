@@ -33,11 +33,11 @@ export const v2Copy = {
   },
 
   demoSlides: {
-    eyebrow: '03 · Designed Like a Banker, Delivered by AI',
+    eyebrow: '05 · Designed Like a Banker, Delivered by AI',
   },
 
   immediateValue: {
-    eyebrow: '04 · Start with immediate value',
+    eyebrow: '06 · Start with immediate value',
     headline: 'Deploy a powerful AI banker from day one.',
     bullets: [
       {
@@ -61,7 +61,7 @@ export const v2Copy = {
   },
 
   interfaceChanging: {
-    eyebrow: '05 · The interface is changing',
+    eyebrow: '07 · The interface is changing',
     headline: 'Banking is moving to AI interfaces.',
     paragraphs: [
       "Customers are starting to explore financial decisions in tools like ChatGPT and Claude. It's early, but behavior is shifting.",
@@ -72,7 +72,7 @@ export const v2Copy = {
   },
 
   futureProof: {
-    eyebrow: '06 · Future-proof the bank',
+    eyebrow: '08 · Future-proof the bank',
     headline: 'The interface moves. The control stays.',
     lead: 'As interactions move beyond the banking app to external surfaces, the value shifts to what only banks can own. Ella is the layer that holds it.',
     layers: [
@@ -84,7 +84,7 @@ export const v2Copy = {
   },
 
   insightToAction: {
-    eyebrow: '07 · From insight to action',
+    eyebrow: '09 · From insight to action',
     headline: 'Most AI stops at advice. Ella executes.',
     bodyLead: 'One conversation.',
     flow: 'Question → insight → recommendation → action.',
@@ -92,7 +92,7 @@ export const v2Copy = {
   },
 
   realBanking: {
-    eyebrow: '08 · Built for real banking',
+    eyebrow: '10 · Built for real banking',
     headline: 'AI is easy. Banking AI is not.',
     paragraphs: [
       'Ella was built inside a regulated bank, for regulated environments. Audit trails, consent enforcement, policy-backed answers, fraud and risk controls. This is production infrastructure, not a prototype.',
@@ -102,20 +102,20 @@ export const v2Copy = {
   },
 
   financialBrain: {
-    eyebrow: '09 · A unified financial brain',
+    eyebrow: '11 · A unified financial brain',
     headline: 'One complete view of the customer.',
     body: "A 360° view of the customer's financial life: core banking data, external financial data, and behavioral signals unified into a single model. Everything in one place, to deliver complete and accurate answers.",
     pullQuote: 'Same question. Different customer. Different answer.',
   },
 
   openControlled: {
-    eyebrow: '10 · Open, but controlled',
+    eyebrow: '12 · Open, but controlled',
     headline: 'Let others build on your bank, without losing it.',
     body: 'External agents, fintech partners, customer-built tools. All on your data, your policy, your execution. The bank stays the bank.',
   },
 
   noHeavyLifting: {
-    eyebrow: '11 · No heavy lifting',
+    eyebrow: '13 · No heavy lifting',
     headline: 'The hardest parts are already solved.',
     paragraphs: [
       'No integrations to rebuild. No consent system to invent. No policy engine to design. No action orchestration to wire.',

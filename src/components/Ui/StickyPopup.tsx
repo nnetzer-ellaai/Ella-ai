@@ -5,9 +5,10 @@ type Props = {
   onContactClick: () => void;
   isModalOpen?: boolean;
   onDismiss?: () => void;
+  ctaLabel?: string;
 };
 
-export default function StickyPopup({ onContactClick, isModalOpen = false, onDismiss }: Props) {
+export default function StickyPopup({ onContactClick, isModalOpen = false, onDismiss, ctaLabel = 'Contact Us' }: Props) {
   const [isVisible, setIsVisible] = useState(false);
   const [isDismissed, setIsDismissed] = useState(false);
 
@@ -60,7 +61,7 @@ export default function StickyPopup({ onContactClick, isModalOpen = false, onDis
           onClick={() => { onContactClick(); handleDismiss(); }}
           className="w-full bg-[#3E3E3E] text-white rounded-full py-2.5 font-OneZero-Apparat-Book text-sm hover:bg-darkGrey/80 transition-colors"
         >
-          Contact Us
+          {ctaLabel}
         </button>
       </div>
 
@@ -84,7 +85,7 @@ export default function StickyPopup({ onContactClick, isModalOpen = false, onDis
             onClick={() => { onContactClick(); handleDismiss(); }}
             className="bg-[#3E3E3E] text-white rounded-full py-2 px-5 font-OneZero-Apparat-Book text-sm whitespace-nowrap"
           >
-            Contact Us
+            {ctaLabel}
           </button>
           <button onClick={handleDismiss} className="text-midGrey text-xl leading-none">
             ×
