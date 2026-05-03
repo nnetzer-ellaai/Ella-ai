@@ -1,0 +1,23 @@
+# robots.txt — ellaai.ai
+
+# Search engines: index all pages
+User-agent: *
+Allow: /
+Disallow: /v1
+
+# AI training: allow retrieval (good for GEO citations), disallow training data harvesting
+User-agent: GPTBot
+Allow: /
+Disallow: /v1
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: GoogleOther
+Allow: /
+
+# Sitemap
+Sitemap: https://www.ellaai.ai/sitemap.xml
