@@ -13,11 +13,9 @@ export default function FloatingCTA({ onContactClick, onDemoClick, isModalOpen =
 
   useEffect(() => {
     const handleScroll = () => {
-      const heroElement = document.getElementById('hero');
-      if (heroElement) {
-        const heroBottom = heroElement.getBoundingClientRect().bottom;
-        setIsVisible(heroBottom < 0);
-      }
+      // Show after scrolling 50% of the page
+      const scrolled = window.scrollY / (document.body.scrollHeight - window.innerHeight);
+      setIsVisible(scrolled >= 0.5);
     };
 
     const handleResize = () => {

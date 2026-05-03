@@ -23,10 +23,12 @@ import V2FinancialBrain from './components/V2FinancialBrain';
 import V2OpenControlled from './components/V2OpenControlled';
 import V2NoHeavyLifting from './components/V2NoHeavyLifting';
 import V2ClosingCTA from './components/V2ClosingCTA';
+import V2Nav from './components/V2Nav';
+import V2Timeline from './components/V2Timeline';
+import V2ImpactCards from './components/V2ImpactCards';
 
 export default function V2App() {
   const [error, setError] = useState(false);
-  const [isPopupDismissed, setIsPopupDismissed] = useState(false);
 
   if (error) return <FormError />;
 
@@ -71,10 +73,13 @@ export default function V2App() {
           }
         })}</script>
       </Helmet>
+      <V2Nav />
       <V2Hero onPrimaryCta={openCalendly} />
       <V2Typewriter />
       <V2BuiltRunning />
       <V2KPIs />
+      <V2ImpactCards />
+      <V2Timeline />
       <V2VideoDemos />
       <V2DemoSlides />
       <hr className="border-b w-[90%] mx-auto" />
@@ -98,14 +103,10 @@ export default function V2App() {
 
       <Footer hidePartnerCredit />
 
-      {isPopupDismissed && (
-        <FloatingCTA
-          onContactClick={openCalendly}
-        />
-      )}
+      <FloatingCTA onContactClick={openCalendly} />
       <StickyPopup
         onContactClick={openCalendly}
-        onDismiss={() => setIsPopupDismissed(true)}
+        onDismiss={() => {}}
       />
     </div>
   );

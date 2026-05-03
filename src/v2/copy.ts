@@ -23,6 +23,7 @@ export const v2Copy = {
   kpis: {
     eyebrow: '02 · The OneZero use-case',
     headline: 'Numbers from a bank that runs on Ella.',
+    proof: 'Running for over 2 years · 10M+ real customer interactions',
     stats: [
       { value: '5×', label: 'Engagement', desc: 'More customer interactions with the bank.' },
       { value: '−60%', label: 'Cost-to-serve', desc: '2× growth with 20% fewer bankers.' },

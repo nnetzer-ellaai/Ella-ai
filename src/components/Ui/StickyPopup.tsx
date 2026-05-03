@@ -12,10 +12,13 @@ export default function StickyPopup({ onContactClick, isModalOpen = false, onDis
   const [isDismissed, setIsDismissed] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      if (!isDismissed) setIsVisible(true);
-    }, 5000);
-    return () => clearTimeout(timer);
+    const onScroll = () => {
+      if (isDismissed) return;
+      const scrolled = window.scrollY / (document.body.scrollHeight - window.innerHeight);
+      if (scrolled >= 0.4) setIsVisible(true);
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
   }, [isDismissed]);
 
   const handleDismiss = () => {

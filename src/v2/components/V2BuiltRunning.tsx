@@ -4,7 +4,7 @@ import { v2Copy } from '../copy';
 export default function V2BuiltRunning() {
   const c = v2Copy.builtRunning;
   return (
-    <V2Section eyebrow={c.eyebrow}>
+    <V2Section eyebrow={c.eyebrow} id="v2-built-running">
       <h2 className="font-OneZero-Apparat-Light text-[36px] md:text-[64px] leading-[100%] md:leading-[110%] mb-[28px] md:mb-[40px] max-w-[900px]">
         {c.headline}
       </h2>
