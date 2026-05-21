@@ -20,50 +20,81 @@ import ContactModal from './components/Form/ContactModal';
 import FloatingCTA from './components/Ui/FloatingCTA';
 import StickyPopup from './components/Ui/StickyPopup';
 import V2App from './v2/V2App';
+import NavHeader from './components/NavHeader/NavHeader';
+import TrustBadges from './components/TrustBadges/TrustBadges';
+import Qa from './components/Qa/Qa';
+
+type ModalVariant = 'contact' | 'demo';
 
 function HomePage() {
   const [error, setError] = useState(false);
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
+  const [modalVariant, setModalVariant] = useState<ModalVariant>('contact');
   const [isPopupDismissed, setIsPopupDismissed] = useState(false);
+
+  const openContact = () => { setModalVariant('contact'); setIsContactModalOpen(true); };
+  const openDemo = () => { setModalVariant('demo'); setIsContactModalOpen(true); };
 
   if (error) return <FormError />;
 
   return (
     <div>
-      {/* {isDesktop && isScrolled && <StickyFooter />} */}
-      <FirstScreen />
+      <NavHeader onBookDemoClick={openDemo} />
+
+      <FirstScreen onBookDemoClick={openDemo} onContactClick={openContact} />
+
       <SeventScreen />
-      <AfterSeventhScreen/>
+
+      <section id="impact">
+        <AfterSeventhScreen />
+      </section>
+
       <SixthPart />
-      <hr className=' border-b w-[90%] mx-auto' />
+      <hr className="border-b w-[90%] mx-auto" />
       <SecondScreen />
       <ThirdScreen />
-      <FourthScreen />
-      <TimelineScreen />
-      <AfterFourthScreen />
-      <FifthScreen />
-      <FinancialImpactScreen />
-      <div className="flex flex-col-reverse md:flex-row w-full md:h-[754px]  md:w-full bg-[#E0DEEC]">
-        <FormImage />
-        <Form setError={setError} />
-      </div>
-      {/* <Qa /> */}
-      <Footer />
-      {/* {!isDesktop && <StickyFooter />} */}
 
-      {/* FloatingCTA: scroll-triggered, only on desktop after popup dismissed */}
+      <section id="how-it-works">
+        <FourthScreen />
+        <TimelineScreen />
+        <AfterFourthScreen />
+      </section>
+
+      <FifthScreen />
+
+      <FinancialImpactScreen />
+
+      <TrustBadges />
+
+      <Qa />
+
+      <section id="contact">
+        <div className="flex flex-col-reverse md:flex-row w-full md:h-[754px] md:w-full bg-[#E0DEEC]">
+          <FormImage />
+          <Form setError={setError} />
+        </div>
+      </section>
+
+      <Footer />
+
       {isPopupDismissed && (
         <FloatingCTA
-          onContactClick={() => setIsContactModalOpen(true)}
+          onContactClick={openContact}
+          onBookDemoClick={openDemo}
           isModalOpen={isContactModalOpen}
         />
       )}
       <StickyPopup
-        onContactClick={() => setIsContactModalOpen(true)}
+        onContactClick={openContact}
+        onBookDemoClick={openDemo}
         isModalOpen={isContactModalOpen}
         onDismiss={() => setIsPopupDismissed(true)}
       />
-      <ContactModal open={isContactModalOpen} onClose={() => setIsContactModalOpen(false)} />
+      <ContactModal
+        open={isContactModalOpen}
+        onClose={() => setIsContactModalOpen(false)}
+        variant={modalVariant}
+      />
     </div>
   );
 }

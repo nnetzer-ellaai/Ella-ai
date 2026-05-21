@@ -10,5 +10,15 @@
   },
   "compatibility_flags": [
     "nodejs_compat"
+  ],
+  "routes": [
+    {
+      "pattern": "ellaai.ai/*",
+      "custom_domain": true
+    },
+    {
+      "pattern": "www.ellaai.ai/*",
+      "custom_domain": true
+    }
   ]
 }

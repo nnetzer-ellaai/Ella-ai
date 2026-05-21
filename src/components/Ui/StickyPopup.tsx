@@ -3,12 +3,13 @@ import ellaLogo from '../../assets/ella-logo.png';
 
 type Props = {
   onContactClick: () => void;
+  onBookDemoClick?: () => void;
   isModalOpen?: boolean;
   onDismiss?: () => void;
   ctaLabel?: string;
 };
 
-export default function StickyPopup({ onContactClick, isModalOpen = false, onDismiss, ctaLabel = 'Contact Us' }: Props) {
+export default function StickyPopup({ onContactClick, onBookDemoClick, isModalOpen = false, onDismiss, ctaLabel = 'Contact Us' }: Props) {
   const [isVisible, setIsVisible] = useState(false);
   const [isDismissed, setIsDismissed] = useState(false);
 
@@ -57,12 +58,22 @@ export default function StickyPopup({ onContactClick, isModalOpen = false, onDis
         <p className="font-OneZero-Apparat-Book text-sm text-midGrey mb-5">
           Discover how Ella helps banks deliver AI banking at scale.
         </p>
-        <button
-          onClick={() => { onContactClick(); handleDismiss(); }}
-          className="w-full bg-[#3E3E3E] text-white rounded-full py-2.5 font-OneZero-Apparat-Book text-sm hover:bg-darkGrey/80 transition-colors"
-        >
-          {ctaLabel}
-        </button>
+        <div className="flex flex-col gap-2">
+          {onBookDemoClick && (
+            <button
+              onClick={() => { onBookDemoClick(); handleDismiss(); }}
+              className="w-full bg-blue text-white rounded-full py-2.5 font-OneZero-Apparat-Book text-sm hover:bg-blue/90 transition-colors"
+            >
+              Book a Demo
+            </button>
+          )}
+          <button
+            onClick={() => { onContactClick(); handleDismiss(); }}
+            className="w-full bg-[#3E3E3E] text-white rounded-full py-2.5 font-OneZero-Apparat-Book text-sm hover:bg-darkGrey/80 transition-colors"
+          >
+            {ctaLabel}
+          </button>
+        </div>
       </div>
 
       {/* Mobile: slim bottom bar */}
@@ -81,6 +92,14 @@ export default function StickyPopup({ onContactClick, isModalOpen = false, onDis
           Ready to see Ella?
         </p>
         <div className="flex items-center gap-3">
+          {onBookDemoClick && (
+            <button
+              onClick={() => { onBookDemoClick(); handleDismiss(); }}
+              className="bg-blue text-white rounded-full py-2 px-5 font-OneZero-Apparat-Book text-sm whitespace-nowrap"
+            >
+              Book a Demo
+            </button>
+          )}
           <button
             onClick={() => { onContactClick(); handleDismiss(); }}
             className="bg-[#3E3E3E] text-white rounded-full py-2 px-5 font-OneZero-Apparat-Book text-sm whitespace-nowrap"

@@ -3,18 +3,17 @@ import { MIN_DESKTOP_WIDTH } from '../../constants/constants';
 
 type Props = {
   onContactClick: () => void;
-  onDemoClick?: () => void;
+  onBookDemoClick?: () => void;
   isModalOpen?: boolean;
   ctaLabel?: string;
 };
 
-export default function FloatingCTA({ onContactClick, onDemoClick, isModalOpen = false, ctaLabel = 'Contact Us' }: Props) {
+export default function FloatingCTA({ onContactClick, onBookDemoClick, isModalOpen = false, ctaLabel = 'Contact Us' }: Props) {
   const [isVisible, setIsVisible] = useState(false);
   const [isDesktop, setIsDesktop] = useState(window.screen.width >= MIN_DESKTOP_WIDTH);
 
   useEffect(() => {
     const handleScroll = () => {
-      // Show after scrolling 50% of the page
       const scrolled = window.scrollY / (document.body.scrollHeight - window.innerHeight);
       setIsVisible(scrolled >= 0.5);
     };
@@ -36,13 +35,24 @@ export default function FloatingCTA({ onContactClick, onDemoClick, isModalOpen =
 
   if (isDesktop) {
     return (
-      <button
-        onClick={onContactClick}
-        className="fixed bottom-8 right-8 z-40 bg-blue text-white rounded-full py-3 px-6 font-OneZero-Apparat-Book shadow-lg hover:bg-blue/90 transition-all duration-300"
-        aria-label={ctaLabel}
-      >
-        {ctaLabel}
-      </button>
+      <div className="fixed bottom-8 right-8 z-40 flex gap-2 shadow-lg">
+        {onBookDemoClick && (
+          <button
+            onClick={onBookDemoClick}
+            className="bg-blue text-white rounded-full py-3 px-6 font-OneZero-Apparat-Book hover:bg-blue/90 transition-all duration-300"
+            aria-label="Book a Demo"
+          >
+            Book a Demo
+          </button>
+        )}
+        <button
+          onClick={onContactClick}
+          className="bg-white text-darkGrey border border-lightGrey rounded-full py-3 px-6 font-OneZero-Apparat-Book hover:bg-grey transition-all duration-300"
+          aria-label={ctaLabel}
+        >
+          {ctaLabel}
+        </button>
+      </div>
     );
   }
 
@@ -54,12 +64,12 @@ export default function FloatingCTA({ onContactClick, onDemoClick, isModalOpen =
       >
         {ctaLabel}
       </button>
-      {onDemoClick && (
+      {onBookDemoClick && (
         <button
-          onClick={onDemoClick}
+          onClick={onBookDemoClick}
           className="flex-1 text-blue border border-blue rounded-full py-3 font-OneZero-Apparat-Book text-sm hover:bg-blue/5 transition-colors"
         >
-          See Demo
+          Book a Demo
         </button>
       )}
     </div>
