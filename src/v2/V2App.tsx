@@ -194,7 +194,7 @@ export default function V2App() {
         <Form setError={setError} />
       </div>
 
-      <Footer hidePartnerCredit showLocation />
+      <Footer hidePartnerCredit showLocation v2 />
 
       <FloatingCTA onContactClick={openCalendly} ctaLabel="Book a demo" />
       <StickyPopup

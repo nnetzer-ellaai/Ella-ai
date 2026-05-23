@@ -17,12 +17,27 @@ function LinkedInIcon() {
 type Props = {
   hidePartnerCredit?: boolean;
   showLocation?: boolean;
+  v2?: boolean;
 };
 
-export default function Footer({ hidePartnerCredit = false, showLocation = false }: Props) {
+const V1_NAV = [
+  { label: 'How it Works', id: 'how-it-works' },
+  { label: 'Impact', id: 'impact' },
+  { label: 'Contact', id: 'contact' },
+];
+
+const V2_NAV = [
+  { label: 'How it Works', id: 'v2-built-running' },
+  { label: 'Impact', id: 'v2-future-proof' },
+  { label: 'Contact', id: 'v2-lead-form' },
+];
+
+export default function Footer({ hidePartnerCredit = false, showLocation = false, v2 = false }: Props) {
   const scrollTo = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
   };
+
+  const navItems = v2 ? V2_NAV : V1_NAV;
 
   return (
     <footer className="w-full bg-white border-t border-[#E5E5EA] py-10 px-5 md:px-[4.5rem]">
@@ -45,11 +60,7 @@ export default function Footer({ hidePartnerCredit = false, showLocation = false
           <p className="font-OneZero-Apparat-Medium text-xs text-darkGrey uppercase tracking-wider mb-1">
             Navigation
           </p>
-          {[
-            { label: 'How it Works', id: 'how-it-works' },
-            { label: 'Impact', id: 'impact' },
-            { label: 'Contact', id: 'contact' },
-          ].map(({ label, id }) => (
+          {navItems.map(({ label, id }) => (
             <button
               key={id}
               onClick={() => scrollTo(id)}
