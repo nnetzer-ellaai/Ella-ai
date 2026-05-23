@@ -13,11 +13,11 @@
   ],
   "routes": [
     {
-      "pattern": "ellaai.ai/*",
+      "pattern": "ellaai.ai",
       "custom_domain": true
     },
     {
-      "pattern": "www.ellaai.ai/*",
+      "pattern": "www.ellaai.ai",
       "custom_domain": true
     }
   ]
