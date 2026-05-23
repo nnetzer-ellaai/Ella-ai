@@ -28,6 +28,7 @@ import V2Timeline from './components/V2Timeline';
 import V2ImpactCards from './components/V2ImpactCards';
 import V2FAQ from './components/V2FAQ';
 import { v2Copy } from './copy';
+import TrustBadges from '../components/TrustBadges/TrustBadges';
 
 export default function V2App() {
   const [error, setError] = useState(false);
@@ -181,6 +182,7 @@ export default function V2App() {
       <V2FinancialBrain />
       <V2OpenControlled />
       <V2NoHeavyLifting />
+      <TrustBadges />
       <V2FAQ />
       <V2ClosingCTA onPrimaryCta={openCalendly} />
 
