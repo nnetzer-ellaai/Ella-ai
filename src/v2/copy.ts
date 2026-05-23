@@ -8,7 +8,8 @@ export const v2Copy = {
     proofPre: 'Running in a licensed bank. Serving real customers. Handling',
     proofBold: '85%',
     proofPost: 'of daily interactions.',
-    primaryCta: 'See Ella live',
+    primaryCta: 'Book a demo',
+    secondaryCta: 'Watch demo',
   },
 
   builtRunning: {
@@ -153,6 +154,6 @@ export const v2Copy = {
   closing: {
     headlineLine1: 'Start with a proven AI banker.',
     headlineLine2: 'Scale into the infrastructure of AI-driven banking.',
-    primaryCta: 'Book a briefing',
+    primaryCta: 'Book a demo',
   },
 };

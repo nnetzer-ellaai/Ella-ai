@@ -66,13 +66,23 @@ export default function V2Hero({ onPrimaryCta }: Props) {
             </p>
           </div>
 
-          {/* Single CTA */}
-          <div className="flex justify-center mt-[26px] md:mt-[30px]">
+          {/* Dual CTA */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mt-[26px] md:mt-[30px]">
             <button
               onClick={onPrimaryCta}
-              className="font-OneZero-Apparat-Book text-[15px] md:text-[16px] text-white bg-[#3E3E3E] rounded-3xl py-[14px] px-8 hover:bg-darkGrey/80 transition-colors shadow-lg"
+              className="font-OneZero-Apparat-Book text-[15px] md:text-[16px] text-white bg-blue rounded-3xl py-[14px] px-8 hover:bg-blue/90 transition-colors shadow-lg"
             >
               {c.primaryCta}
+            </button>
+            <button
+              onClick={() => document.getElementById('v2-video-demos')?.scrollIntoView({ behavior: 'smooth' })}
+              className="font-OneZero-Apparat-Book text-[15px] md:text-[16px] text-darkGrey bg-white/80 backdrop-blur-sm rounded-3xl py-[14px] px-8 hover:bg-white transition-colors shadow-lg flex items-center gap-2"
+            >
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="shrink-0">
+                <circle cx="7" cy="7" r="6.5" stroke="currentColor"/>
+                <polygon points="5.5,4.5 10,7 5.5,9.5" fill="currentColor"/>
+              </svg>
+              {c.secondaryCta}
             </button>
           </div>
         </div>

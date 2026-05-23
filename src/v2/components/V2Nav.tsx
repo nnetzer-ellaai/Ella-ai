@@ -3,6 +3,8 @@ import ellaLogo from '../../assets/ella-logo.png';
 import ellaDesk from '../../assets/desk/2_c.mp4';
 import { openCalendly } from '../../utils/calendly';
 
+const LINKEDIN_URL = 'https://il.linkedin.com/company/ellaai-ai';
+
 const NAV_LINKS = [
   { label: 'Live Today', href: '#v2-built-running' },
   { label: 'The Platform', href: '#v2-future-proof' },
@@ -91,6 +93,21 @@ export default function V2Nav() {
               </svg>
               Watch Demo
             </button>
+
+            {/* LinkedIn icon */}
+            <a
+              href={LINKEDIN_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Ella.AI on LinkedIn"
+              className={`transition-colors ${stuck ? 'text-darkGrey/60 hover:text-blue' : 'text-white/60 hover:text-white'}`}
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                <rect x="2" y="9" width="4" height="12"/>
+                <circle cx="4" cy="4" r="2"/>
+              </svg>
+            </a>
           </div>
 
           {/* Desktop CTA */}
