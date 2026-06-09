@@ -20,6 +20,7 @@ import ContactModal from './components/Form/ContactModal';
 import FloatingCTA from './components/Ui/FloatingCTA';
 import StickyPopup from './components/Ui/StickyPopup';
 import V2App from './v2/V2App';
+import Questionnaire from './v2/Questionnaire';
 import NavHeader from './components/NavHeader/NavHeader';
 import TrustBadges from './components/TrustBadges/TrustBadges';
 import Qa from './components/Qa/Qa';
@@ -105,6 +106,7 @@ function App() {
       <Routes>
         <Route path="/" element={<V2App />} />
         <Route path="/v1" element={<HomePage />} />
+        <Route path="/questionnaire" element={<Questionnaire />} />
       </Routes>
     </BrowserRouter>
   );
