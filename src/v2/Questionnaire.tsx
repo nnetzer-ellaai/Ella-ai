@@ -171,8 +171,8 @@ export default function Questionnaire() {
     try {
       const res = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify(payload),
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded', Accept: 'application/json' },
+        body: new URLSearchParams(payload as Record<string, string>).toString(),
       });
       const data = await res.json();
       if (data.success) {
