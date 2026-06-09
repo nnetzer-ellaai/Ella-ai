@@ -135,7 +135,7 @@ export default function Questionnaire() {
 
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [submitError, setSubmitError] = useState(false);
+  const [submitError, setSubmitError] = useState<string | false>(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -179,10 +179,12 @@ export default function Questionnaire() {
         setSubmitted(true);
         window.scrollTo({ top: 0, behavior: 'smooth' });
       } else {
-        setSubmitError(true);
+        console.error('Web3Forms error:', data);
+        setSubmitError(data.message || 'Unknown error');
       }
-    } catch {
-      setSubmitError(true);
+    } catch (err) {
+      console.error('Submit failed:', err);
+      setSubmitError('Network error');
     } finally {
       setLoading(false);
     }
@@ -239,6 +241,8 @@ export default function Questionnaire() {
             </div>
           ) : (
             <form onSubmit={handleSubmit} noValidate>
+              {/* Honeypot — bots fill this, real users don't */}
+              <input type="checkbox" name="botcheck" className="hidden" style={{ display: 'none' }} tabIndex={-1} autoComplete="off" />
               {/* Header */}
               <div className="mb-10">
                 <p className="font-OneZero-Apparat-Book text-[12px] text-[#2D68F3] tracking-widest uppercase mb-3">
@@ -418,7 +422,7 @@ export default function Questionnaire() {
               <div className="mt-8">
                 {submitError && (
                   <p className="font-OneZero-Apparat-Book text-[14px] text-red-500 mb-4">
-                    Something went wrong — please try again or email us directly.
+                    Something went wrong: {submitError}. Please try again or email us directly.
                   </p>
                 )}
                 <button
