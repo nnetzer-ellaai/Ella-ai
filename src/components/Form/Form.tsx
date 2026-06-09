@@ -73,8 +73,8 @@ export default function Form({ setError, isModal = false }: Props) {
 
     fetch('https://api.web3forms.com/submit', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-      body: JSON.stringify(payload),
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded', 'Accept': 'application/json' },
+      body: new URLSearchParams(payload).toString(),
     })
       .then((res) => res.json())
       .then((data) => {

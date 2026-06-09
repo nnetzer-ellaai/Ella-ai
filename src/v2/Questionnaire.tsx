@@ -131,7 +131,6 @@ export default function Questionnaire() {
   const [q8, setQ8] = useState<string[]>([]);
   const [q9, setQ9] = useState('');
   const [q10, setQ10] = useState('');
-  const [q11, setQ11] = useState('');
 
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -422,7 +421,8 @@ export default function Questionnaire() {
               <div className="mt-8">
                 {submitError && (
                   <p className="font-OneZero-Apparat-Book text-[14px] text-red-500 mb-4">
-                    Something went wrong: {submitError}. Please try again or email us directly.
+                    Something went wrong — please try again or email us at{' '}
+                    <a href="mailto:info@ellaai.ai" className="underline">info@ellaai.ai</a>.
                   </p>
                 )}
                 <button
