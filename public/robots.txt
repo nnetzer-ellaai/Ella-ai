@@ -4,6 +4,7 @@
 User-agent: *
 Allow: /
 Disallow: /v1
+Content-Signal: search=yes, ai-input=yes, ai-train=no
 
 # AI training: allow retrieval (good for GEO citations), disallow training data harvesting
 User-agent: GPTBot
